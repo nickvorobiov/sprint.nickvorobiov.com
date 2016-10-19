@@ -1,0 +1,77 @@
+body {
+  font-size: 16px;
+}
+
+.b-head {
+  background-color: #f5f5f5;
+
+  @media screen and (min-width: 992px) {
+    background-image: url(/images/topman.jpg);
+    background-size: 30% auto;
+    background-repeat: no-repeat;
+    background-position: 10% center;   
+  }
+
+  h1 {
+    margin-top: 80px;
+  }
+}
+
+.b-prizes {
+  background-image: url(../images/b_anchor.jpg);
+  h3 {
+    font-weight: 500;
+    color: #ffc300;
+  }
+}
+
+.b-system {
+  text-align: center;
+  span {
+    font-size: 60px;
+    text-align: center;
+    display: block;
+  }
+}
+
+.b-program {
+  &__day-name {
+    font-weight: bold;
+    width: 20%;
+    text-align: right;
+  }
+}
+.b-me {
+  background: #efefef url(../images/b_main.jpg) bottom right no-repeat;
+  background-size: 50%;  
+
+  &__sign {
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    right: 70px;
+    bottom: 45px;
+
+    @media (max-width: 768px) {
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+}
+
+.b-odd {
+  background-color: #efefef;
+}
+
+.b-testimonials {
+  background-color: #efefef;
+  img {
+    border: 1px solid #e7e8ec;
+  }
+}
+
+.b-join {
+  &__button {
+    white-space: normal;
+  }
+}

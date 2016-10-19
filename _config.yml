@@ -1,0 +1,21 @@
+baseurl: ""
+url: "http://sprint.nickvorobiov.com"
+markdown: kramdown
+exclude:
+  - node_modules
+  - package.json
+  - README.md
+  - gulpfile.js
+
+title: "Спринт «Неизбежные Результаты»"
+description: "Прокачиваем личные качества чтобы добиваться крутых целей"
+keywords: "личностный рост, самодисциплина, продуктивность, мотивация, цели, целеполагание, достигатор"
+author: "Николай Воробьёв"
+
+permalink: /:title/
+
+vk_app_id: 5640654 # localhost:8000
+yandex_metrika: 40309910 # ok.nickvorobiov.com
+google_analytics: UA-46456269-20 # ok.nickvorobiov.com
+#facebook_pixel_id: 1587051131601822
+#vk_retarget_url: '//vk.com/rtrg?r=aI/cf96k7qEjmzkRwyCoepI*VE4WUyEb51Uz28eKre3V1f*mGxHhj7qptg2mJ6ZJpz2Jm7G16svwZHBWjPliAz0fD25AfUBGNaCgf2CBkpewuwZLZJAWF6*ebILE68KYTswPvPwzat/KaGZrdnrXWoDjyj/4yAiEGQ*BDXRewFw-&pixel_id=1000027749'
