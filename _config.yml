@@ -6,6 +6,7 @@ exclude:
   - package.json
   - README.md
   - gulpfile.js
+  - scripts
 
 title: "Спринт «Неизбежные Результаты»"
 description: "Прокачиваем личные качества чтобы добиваться крутых целей"
