@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cd ./_site; rsync -rui . root@bot.nickvorobiov.com:/var/www/sprint.nickvorobiov.com/_site --delete
