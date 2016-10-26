@@ -160,7 +160,7 @@ layout: base
     <p class="lead">Для участия нужно выполнить 2 простых шага:</p>
 
     <h2 class="m-y-md">1. Отправить заявку в закрытую группу</h2>
-    <p>Адрес страницы ВКонтакте: <b><a href="https://vk.com/sprint2results" target="_blank">https://vk.com/sprint2results</a></b></p>
+    <p>Адрес страницы ВКонтакте: <b><a id="grouplink" href="https://vk.com/sprint2results" target="_blank">https://vk.com/sprint2results</a></b></p>
     <p>Перейди по ссылке и оставь заявку на вступление в группу.</p>
     <h2 class="m-y-md">2. Оставить комментарий в социальной сети:</h2>
     <blockquote>
@@ -182,6 +182,48 @@ layout: base
 <script type="text/javascript">
   VK.init({apiId: {{ site.vk_app_id }}, onlyWidgets: true});
   VK.Widgets.Comments("vk_comments", {limit: 100, attach: "*"});
+
+  VK.Observer.subscribe("widgets.comments.new_comment", function f(num, last_comment, date, sign){
+    console.log('event: comment vk');
+    ga('send', 'event', 'comment', 'vk');
+    yaCounter{{ site.yandex_metrika }}.reachGoal('comment');
+  });
 </script>
 
 <p class="text-center">ООО РЕАЛЬНОСТЬ, +7 921 7618506 САНКТ-ПЕТЕРБУРГ, УЛ. НЕКРАСОВА 40 <a href="http://soedinennost.com/privacy">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a></p>
+
+<script type="text/javascript">
+  $(function(){
+    $('#grouplink').click(function(){
+      console.log('event: group');
+      ga('send', 'event', 'group');
+      yaCounter{{ site.yandex_metrika }}.reachGoal('group');
+    })
+  })
+</script>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{{ site.fb_app_id }}',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+
+    console.log('fb init');
+    FB.Event.subscribe('comment.create', function(targetUrl) {
+      console.log('event: comment fb');
+      ga('send', 'event', 'comment', 'facebook');
+      yaCounter{{ site.yandex_metrika }}.reachGoal('comment');
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
