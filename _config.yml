@@ -7,6 +7,9 @@ exclude:
   - README.md
   - gulpfile.js
   - scripts
+  - deploy
+  - deploy-key.enc
+  - deploy-key
 
 title: "Спринт «Неизбежные Результаты»"
 description: "Прокачиваем личные качества чтобы добиваться крутых целей"
